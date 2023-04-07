@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 // import NotFound from './pages/NotFound';
 import './styles/app.scss';
+import Spinner from './components/Spinner';
 
 const CartPage = React.lazy(() => import(/* webpackChunkName: "CartPage" */'./pages/CartPage'));
 const NotFound = React.lazy(() => import(/* webpackChunkName: "NotFound" */'./pages/NotFound'));
@@ -18,7 +19,7 @@ function App() {
           <BrowserRouter>
             <ScrollToTop />
             <Header />
-            <Suspense fallback={<div>Идет загрузка...</div>}>
+            <Suspense fallback={<Spinner />}>
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/cart' element={<CartPage />} />

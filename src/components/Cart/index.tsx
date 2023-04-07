@@ -63,9 +63,9 @@ function Cart() {
 
             <span>Вернуться назад</span>
           </NavLink>
-          <div className='button pay-btn'>
-            <span>Оплатить сейчас</span>
-          </div>
+          <button className='button pay-btn'>
+            Оплатить сейчас
+          </button>
         </div>
       </div>
     </div>
