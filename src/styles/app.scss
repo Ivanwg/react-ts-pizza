@@ -14,6 +14,51 @@ body {
   line-height: 110%;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+
+  label, input, textarea, span {
+    width: 100%;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field-err {
+    padding: 10px 0 5px 10px;
+    width: 100%;
+    min-height: 29px;
+    color: $orange;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .button {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+}
+
+.input {
+  padding: 15px 10px;
+  border: 1px solid $gray-line;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: $gray-line;
+
+  &:focus, &:focus-visible {
+    border-color: $background;
+  }
+
+  &[aria-invalid] {
+    border-color: $orange;
+  }
+}
+
 .wrapper {
   width: calc(100vw - 100px);
   height: 100%;
@@ -368,6 +413,14 @@ body {
     &__top {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .form {
+    .button {
+      align-self: flex-start;
     }
   }
 }

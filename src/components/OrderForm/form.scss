@@ -1,0 +1,37 @@
+.formWrap {
+  width: 100%;
+}
+
+.formTitle {
+  padding-left: 10px;
+  max-width: 90%;
+  font-size: 24px;
+}
+
+.formReply {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: #232323;
+
+  span {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+
+@media all and (min-width: 768px) {
+  .formWrap {
+    width: 500px;
+  }
+
+  .formTitle {
+    max-width: 100%;
+    font-size: 36px;
+  }
+}

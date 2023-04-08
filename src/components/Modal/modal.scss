@@ -1,0 +1,59 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: rgba(50, 50, 50, 0.5);
+  &__content {
+    position: relative;
+    box-shadow: 0 5px 5px rgba(50, 50, 50, 0.2);
+    padding: 40px 20px;
+    min-width: auto;
+    min-height: 20vh;
+    max-width: 95%;
+    background-color: white;
+  }
+  &__btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background: none;
+    transition: transform .2s ease;
+    svg path {
+      transition: fill .2s ease;
+    }
+
+    &:hover {
+      svg path {
+        fill: #fe5f1e;
+      }
+    }
+
+    &:active {
+      transform: translateY(1px);
+      svg path {
+        fill: #de4101;
+      }
+    }
+  }
+}
+
+
+@media all and (min-width: 420px) {
+  .modal {
+    &__content {
+      padding: 40px;
+      padding-bottom: 60px;
+      min-width: 320px;
+    }
+  }
+}
